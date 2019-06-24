@@ -51,7 +51,9 @@ namespace RumbleController
 
         public void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
         {
-
+            if (scene.name == "MenuCore")
+                BasicUI.CreateGameplayOptionsUI();
+            
         }
 
         public void OnSceneUnloaded(Scene scene)
