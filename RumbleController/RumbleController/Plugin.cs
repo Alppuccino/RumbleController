@@ -11,6 +11,13 @@ namespace RumbleController
         internal static Ref<PluginConfig> config;
         internal static IConfigProvider configProvider;
 
+        static NoteCutHapticEffect noteCutHapticEffect;
+        static HapticFeedbackController hapticFeedbackController;
+        static SaberClashEffect saberClashEffect;
+        static ObstacleSaberSparkleEffectManager ObstacleSaberSparkleEffectManager;
+
+
+
         public void Init(IPALogger logger, [Config.Prefer("json")] IConfigProvider cfgProvider)
         {
             Logger.log = logger;
