@@ -18,7 +18,7 @@ namespace RumbleController.HarmonyPatches
         {
             static bool Prefix(ActiveObstaclesManager ____activeObstaclesManager, ObstacleSaberSparkleEffect ____obstacleSaberSparkleEffectPefab, PlayerController ____playerController, HapticFeedbackController ____hapticFeedbackController, ref Saber[] ____sabers, ref ObstacleSaberSparkleEffect[] ____effects, ref Transform[] ____effectsTransforms, ref bool[] ____isSystemActive, ref bool[] ____wasSystemActive, ref Vector3[] ____burnMarkPositions, ObstacleSaberSparkleEffectManager __instance)
             {
-                if (PluginConfig.obstacleRumble == false)
+                if (PluginConfig.obstacleRumble == false && PluginConfig.enabled)
                 {
                     ____wasSystemActive[0] = ____isSystemActive[0];
                     ____wasSystemActive[1] = ____isSystemActive[1];

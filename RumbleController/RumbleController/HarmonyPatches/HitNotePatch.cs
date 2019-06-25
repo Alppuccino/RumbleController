@@ -15,7 +15,7 @@ namespace RumbleController.HarmonyPatches
         {
             static bool Prefix(Saber.SaberType saberType)
             {
-                if (PluginConfig.noteCut == false)
+                if (PluginConfig.noteCut == false && PluginConfig.enabled)
                     return false;
                 else
                     return true;

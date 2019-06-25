@@ -17,7 +17,7 @@ namespace RumbleController.HarmonyPatches
         {
             static bool Prefix(SaberClashChecker ____saberClashChecker, HapticFeedbackController ____hapticFeedbackController, ref SaberClashEffect __instance, ParticleSystem ____glowParticleSystem, ref ParticleSystem.EmissionModule ____sparkleParticleSystemEmmisionModule, ref ParticleSystem.EmissionModule ____glowParticleSystemEmmisionModule, ref bool ____sabersAreClashing)
             {
-                if (PluginConfig.saberClash == false)
+                if (PluginConfig.saberClash == false && PluginConfig.enabled)
                 {
                     if (____saberClashChecker.sabersAreClashing)
                     {
