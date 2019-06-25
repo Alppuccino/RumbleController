@@ -271,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicUI.cs" />
+    <Compile Include="HarmonyPatches\HitNotePatch.cs" />
+    <Compile Include="HarmonyPatches\ObstacleClashPatch.cs" />
+    <Compile Include="HarmonyPatches\SaberClashPatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="PluginConfig.cs" />
@@ -280,4 +283,7 @@
     <EmbeddedResource Include="manifest.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).dll" "C:\Users\Alppuccino\Oculus\Software\hyperbolic-magnetism-beat-saber\Plugins\$(TargetName).dll"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

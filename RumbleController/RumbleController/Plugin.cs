@@ -1,8 +1,9 @@
-﻿using IPA;
+using IPA;
 using IPA.Config;
 using IPA.Utilities;
 using UnityEngine.SceneManagement;
 using IPALogger = IPA.Logging.Logger;
+using Harmony;
 
 namespace RumbleController
 {
@@ -15,7 +16,7 @@ namespace RumbleController
         static HapticFeedbackController hapticFeedbackController;
         static SaberClashEffect saberClashEffect;
         static ObstacleSaberSparkleEffectManager ObstacleSaberSparkleEffectManager;
-
+        static NoteCutEffectSpawner NoteCutEffectSpawner;
 
 
         public void Init(IPALogger logger, [Config.Prefer("json")] IConfigProvider cfgProvider)
@@ -34,6 +35,8 @@ namespace RumbleController
         public void OnApplicationStart()
         {
             Logger.log.Debug("OnApplicationStart");
+            var harmony = HarmonyInstance.Create("com.company.project.product");
+            harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
         }
 
         public void OnApplicationQuit()
