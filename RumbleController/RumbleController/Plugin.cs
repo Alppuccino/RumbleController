@@ -29,7 +29,7 @@ namespace RumbleController
         public void OnApplicationStart()
         {
             Logger.log.Debug("OnApplicationStart");
-            var harmony = HarmonyInstance.Create("com.company.project.product");
+            var harmony = HarmonyInstance.Create("com.Alppuccino.RumbleController");
             harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
         }
 
