@@ -25,7 +25,7 @@ namespace RumbleController
                 config = v;
             });
         }
-
+        
         public void OnApplicationStart()
         {
             Logger.log.Debug("OnApplicationStart");

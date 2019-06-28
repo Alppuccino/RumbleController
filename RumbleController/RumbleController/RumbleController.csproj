@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\Oculus\Software\hyperbolic-magnetism-beat-saber\Beat Saber_Data\Managed\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony.1.2.0.1, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Oculus\Software\hyperbolic-magnetism-beat-saber\Libs\0Harmony.1.2.0.1.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\Oculus\Software\hyperbolic-magnetism-beat-saber\Beat Saber_Data\Managed\Assembly-CSharp.dll</HintPath>
